@@ -1,22 +1,26 @@
 module reg_file(
-    input [4:0] a1,
-    input [4:0] a2,
-    input clk,
-    input rst,
-    input [31:0] we3,
-    input [31:0] wd3,
-    output [31:0] rd1,
-    output [31:0] rd2
+    input  [4:0] a1,   // Read address 1
+    input  [4:0] a2,   // Read address 2
+    input  [4:0] a3,   // Write address
+    input        clk,  // Clock
+    input        rst,  // Reset (active high)
+    input        we3,  // Write enable
+    input  [31:0] wd3, // Write data
+    output [31:0] rd1, // Read data 1
+    output [31:0] rd2  // Read data 2
 );
 
-reg [31:0] registers [31:0];
+reg [31:0] registers [31:0];  // 32 registers, 32-bit wide
 
-assign rd1 = (!rst) ? 32'h00000000 : registers[a1];
-assign rd2 = (!rst) ? 32'h00000000 : registers[a2];
+// Combinational reads
+assign rd1 = (rst) ? registers[a1] : 32'h00000000;
+assign rd2 = (rst) ? registers[a2] : 32'h00000000;
 
-always @ (posedge clk) begin
-    if (we3) begin
-    registers[a3] <= wd3;
+// Synchronous write
+always @(posedge clk) begin
+    if (rst && we3 && (a3 != 5'd0)) begin
+        registers[a3] <= wd3;
     end
 end
+
 endmodule

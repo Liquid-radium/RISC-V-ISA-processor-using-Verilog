@@ -15,4 +15,4 @@ assign alu_control = (alu_op == 2'b00) ? 3'b000 :
                      ((alu_op == 2'b10) & (funct3 == 3'b111)) ? 3'b010 :
                      ((alu_op == 2'b10) & (funct3 == 3'b000)) & (concat == 2'b11) ? 3'b001 : 
                      ((alu_op == 2'b10) & (funct3 == 3'b000)) & (concat != 2'b11) ? 3'b000 : 3'b000;
-endmodule
+endmodule 
