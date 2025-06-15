@@ -15,7 +15,7 @@ module Control_Unit_Top(
 
 wire [1:0]alu_op;
 
-    main_decoder main_decoder(
+main_decoder main_decoder(
                 .op(op),
                 .reg_write(reg_write),
                 .ImmSrc(ImmSrc),
@@ -24,15 +24,15 @@ wire [1:0]alu_op;
                 .branch(branch),
                 .alu_src(alu_src),
                 .alu_op(alu_op)
-    );
+    );    
 
-    alu_decoder alu_decoder(
+alu_decoder alu_decoder(
                             .alu_op(alu_op),
                             .funct3(funct3),
                             .funct7(funct7),
                             .op(op),
                             .alu_control(alu_control)
-    );
+    );    
 
 
 endmodule
