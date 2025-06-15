@@ -1,5 +1,5 @@
-`include "ALU_Decoder.v"
-`include "Main_Decoder.v"
+`include "alu_decoder.v"
+`include "main_decoder.v"
 
 module Control_Unit_Top(
     input [6:0]op,funct7,

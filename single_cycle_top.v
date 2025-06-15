@@ -1,15 +1,15 @@
-include "program_counter.v"
-include "instruction_memory.v"
-include "register_file.v"
-include "extend.v"
-include "alu.v"
-include "control_unit_top.v"
-include "data_memory.v"
-include "adder.v"
+`include "program_counter.v"
+`include "instruction_memory.v"
+`include "register_file.v"
+`include "extend.v"
+`include "alu.v"
+`include "control_unit_top.v"
+`include "data_memory.v"
+`include "adder.v"
 
 module single_cycle_top(
     input clk,
-    input rst,
+    input rst
 
 );
 

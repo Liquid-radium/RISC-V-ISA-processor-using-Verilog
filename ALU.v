@@ -22,12 +22,18 @@ assign a_and_b = a&b;
 assign a_or_b = a|b;
 assign not_b = ~b;
 assign mux_1 = (alu_control[0] == 1'b0) ? b : not_b;
-assign (cout, sum) = a + mux_1 + alu_control[0];
-assign mux_2 = (alu_control[2:0] == 3'b000) ? sum : 
+wire [32:0] full_sum;
+
+assign full_sum = a + mux_1 + alu_control[0];  // include carry-in from alu_control[0]
+assign sum = full_sum[31:0];
+assign cout = full_sum[32];
+
+assign mux_2 = (alu_control[2:0] == 3'b000) ? sum :
                (alu_control[2:0] == 3'b001) ? sum :
-               (alu_control[2:0] == 3'b010) ? a_and_b : 
-               (alu_control[2:0] == 3'b011) ? a_or_b:
-               (alu_control[2:0] == 3'b100) ? 32'h00000000;
+               (alu_control[2:0] == 3'b010) ? a_and_b :
+               (alu_control[2:0] == 3'b011) ? a_or_b :
+               (alu_control[2:0] == 3'b100) ? 32'h00000000 :
+               32'hFFFFFFFF; // <- default case
 assign zero_flag = &(~result);
 assign negative_flag = result[31];
 assign carry_flag = cout&(~alu_control[1]);
