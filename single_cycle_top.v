@@ -1,5 +1,5 @@
 `include "program_counter.v"
-`include "instruction_memory.v"
+`include "instr_memory.v"
 `include "register_file.v"
 `include "extend.v"
 `include "ALU.v"
