@@ -8,9 +8,9 @@ module Control_Unit_Top(
     output alu_src,
     output mem_write,
     output result_src,
-    output branch;
-    output [1:0]imm_src;
-    output [2:0] alu_control;
+    output branch,
+    output [1:0]imm_src,
+    output [2:0] alu_control
 );
 
 wire [1:0]alu_op;

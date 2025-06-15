@@ -7,7 +7,7 @@ module main_decoder(
     output alu_src,
     output [1:0] imm_src,
     output [1:0] alu_op,
-    output pc_src,
+    output pc_src
 );
 wire branch;
 
