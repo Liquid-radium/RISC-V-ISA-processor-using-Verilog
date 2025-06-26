@@ -6,3 +6,4 @@ module instr_memory(
 reg [31:0] mem [1023:0];
 assign rd = (rst == 1'b0) ? 32'h00000000 : mem[a[11:2]];
 endmodule
+
