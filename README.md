@@ -1,100 +1,76 @@
-# RISC-V-ISA-processor-using-Verilog
-This project implements a 32-bit RISC-V (RV32I) single-cycle processor using Verilog HDL. It serves as a fundamental building block for understanding RISC-V architecture, digital design principles, and processor design using hardware description languages.
+# RISC-V Single-Cycle Processor in Verilog
 
-Features
-Implements the RV32I base integer instruction set
+This project implements a **single-cycle RISC-V processor** using Verilog HDL. It is capable of executing a subset of RISC-V instructions and includes status flag detection for **carry**, **overflow**, **negative**, and **zero** results. The design is fully simulated using **ModelSim**.
 
-Supports the following instruction types:
+## Project Highlights
 
-R-type (e.g., ADD, SUB, AND, OR)
+- RISC-V ISA Subset Support:
+  - `ADD`, `SUB`, `AND`, `OR`, `NOT`, `SLT`
+-  Status Flags:
+  - Carry, Overflow, Negative, Zero
+-  Design Type:
+  - **Single-cycle architecture**
+-  Simulation:
+  - Performed using **ModelSim**
+  
+---
 
-I-type (e.g., ADDI, LOAD)
+##  What is a Single-Cycle Processor?
 
-S-type (e.g., STORE)
+A **single-cycle processor** completes the execution of each instruction in exactly **one clock cycle**. This means that every instruction — no matter how simple or complex — progresses through **fetch, decode, execute, memory, and write-back** phases within the same cycle.
 
-B-type (e.g., BEQ, BNE)
+> While it simplifies control and makes timing predictable, this architecture may lead to longer clock periods to accommodate the slowest instruction.
 
-U-type (e.g., LUI)
+---
 
-J-type (e.g., JAL)
+##  Project Directory Structure
 
-Single-cycle datapath
+riscv-single-cycle-processor/
+│
+├── alu.v # Arithmetic and Logic Unit
+├── alu_decoder.v # Decodes ALU operation based on instruction funct fields
+├── control_unit.v # Generates control signals for datapath
+├── adder.v # Program Counter increment logic
+├── data_memory.v # Data memory unit (read/write)
+├── extend.v # Sign-extension for immediate values
+├── instr_memory.v # Instruction memory (read-only)
+├── main_decoder.v # Decodes opcodes into control signals
+├── program_counter.v # Maintains and updates PC
+├── register_file.v # RISC-V register file (32 registers)
+├── single_cycle_top.v # Top-level integration of all modules
+└── testbench.v # Testbench for simulation in ModelSim
 
-Modular Verilog design with separate modules for:
 
-ALU
+## Instruction Support
+| Instruction | Description               |
+| ----------- | ------------------------- |
+| `ADD`       | Adds two registers        |
+| `SUB`       | Subtracts second register |
+| `AND`       | Bitwise AND               |
+| `OR`        | Bitwise OR                |
+| `NOT`       | Bitwise NOT               |
+| `SLT`       | Set if less than (signed) |
 
-Register file
+## Flags Generated
 
-Control unit
+Carry: Detected during unsigned addition
+Overflow: Detected for signed arithmetic
+Negative: Set if result is negative (MSB = 1)
+Zero: Set if result is zero
 
-Instruction memory
+## Future Work 
 
-Data memory
+Add more RISC-V instructions (e.g., load/store, branches).
+Extend to pipelined or multi-cycle architecture.
+Implement memory-mapped I/O for embedded-style interaction.
+Connect to UART or GPIO on FPGA.
 
-Immediate generator
+License
+This project is open-source and available under the MIT License.
 
-Program counter
+Contributions
+Feel free to fork this repository, suggest improvements, or open pull requests.
 
-Testbench support with sample programs
-
-Easily extensible for pipelining or other ISA extensions
-
-Directory Structure
-csharp
-Copy
-Edit
-RISC-V-ISA-processor-using-Verilog/
-├── alu.v                 # Arithmetic Logic Unit
-├── control_unit.v        # Main control logic
-├── data_memory.v         # Data memory
-├── immediate_generator.v # Immediate value extraction
-├── instruction_memory.v  # Instruction memory
-├── mux.v                 # Multiplexers
-├── program_counter.v     # PC logic
-├── register_file.v       # Register file (32 x 32-bit)
-├── top_module.v          # Top-level processor module
-├── testbench/            # Contains testbench files
-└── README.md             # Project documentation
-🛠️ How It Works
-The processor fetches an instruction from the instruction memory based on the current value of the program counter (PC), decodes it using the control unit and immediate generator, performs the required computation via the ALU, accesses memory if needed, and writes back results to the register file—all within a single clock cycle.
-
-Running the Simulation
-Prerequisites
-Icarus Verilog (iverilog)
-
-GTKWave (for waveform viewing)
-
-Optional: Cocotb (for Python-based co-simulation)
-
-Steps
-Clone the repository:
-
-bash
-Copy
-Edit
-git clone https://github.com/Liquid-radium/RISC-V-ISA-processor-using-Verilog.git
-cd RISC-V-ISA-processor-using-Verilog
-Compile and run the simulation:
-
-bash
-Copy
-Edit
-iverilog -o riscv_tb top_module.v testbench/top_tb.v *.v
-vvp riscv_tb
-View waveform (if dump.vcd is generated):
-
-bash
-Copy
-Edit
-gtkwave dump.vcd
-Future Improvements
-Add pipelining stages (IF, ID, EX, MEM, WB)
-
-Support more RISC-V extensions (e.g., RV32M, RV64I)
-
-Implement hazard detection and forwarding
-
-Integrate with cocotb testbenches
-
-Add a GUI for loading and executing programs
+Author
+Shruti Hegde
+Feel free to connect on GitHub or LinkedIn!
