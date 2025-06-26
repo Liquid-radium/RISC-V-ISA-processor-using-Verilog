@@ -25,8 +25,8 @@ A **single-cycle processor** completes the execution of each instruction in exac
 
 ##  Project Directory Structure
 
-riscv-single-cycle-processor/
-│
+## RISC-V-single-cycle-processor
+
 ├── alu.v # Arithmetic and Logic Unit
 
 ├── alu_decoder.v # Decodes ALU operation based on instruction funct fields
