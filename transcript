@@ -1,0 +1,26 @@
+# vsim single_cycle_top_tb 
+# Start time: 18:22:50 on Jun 26,2025
+# Loading work.single_cycle_top_tb
+# Loading work.single_cycle_top
+# Loading work.program_counter
+# Loading work.instr_memory
+# Loading work.register_file
+# Loading work.extend
+# Loading work.alu
+# Loading work.control_unit
+# Loading work.main_decoder
+# Loading work.alu_decoder
+# Loading work.data_memory
+# Loading work.adder
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (7) for port 'funct7'. The port definition is at: alu_decoder.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /single_cycle_top_tb/uut/control_unit/u_alu_decoder File: control_unit.v Line: 33
+add wave -r *
+
+run 500 ns
+# ** Note: $finish    : testbench.v(27)
+#    Time: 1100 ps  Iteration: 0  Instance: /single_cycle_top_tb
+# 1
+# Break in Module single_cycle_top_tb at testbench.v line 27
+add wave -r *
+# End time: 18:24:22 on Jun 26,2025, Elapsed time: 0:01:32
+# Errors: 0, Warnings: 1

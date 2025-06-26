@@ -1,0 +1,275 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/shruti_hegde/cocotb_demo/sim_build/RISC-V-ISA-processor-using-Verilog
+vadder
+Z1 !s110 1750942368
+!i10b 1
+!s100 `CV3_nPNOd9?C9<E_hK:j2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+II3lnJMAJ]04WPPdC5[@gn2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1750933507
+8adder.v
+Fadder.v
+!i122 1
+Z5 L0 1 8
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z7 !s108 1750942368.000000
+!s107 testbench.v|single_cycle_top.v|register_file.v|program_counter.v|main_decoder.v|instr_memory.v|extend.v|data_memory.v|control_unit.v|alu.v|alu_decoder.v|adder.v|
+Z8 !s90 adder.v|alu_decoder.v|alu.v|control_unit.v|data_memory.v|extend.v|instr_memory.v|main_decoder.v|program_counter.v|register_file.v|single_cycle_top.v|testbench.v|
+!i113 1
+Z9 tCvgOpt 0
+valu
+R1
+!i10b 1
+!s100 PPaBiEhzXhK[OXCRD[YHU2
+R2
+IF_PM;_nMNRn3mcHK[lUnl1
+R3
+R0
+R4
+8alu.v
+Falu.v
+!i122 1
+L0 1 43
+R6
+r1
+!s85 0
+31
+R7
+Z10 !s107 testbench.v|single_cycle_top.v|register_file.v|program_counter.v|main_decoder.v|instr_memory.v|extend.v|data_memory.v|control_unit.v|alu.v|alu_decoder.v|adder.v|
+R8
+!i113 1
+R9
+valu_decoder
+R1
+!i10b 1
+!s100 >NgZ1<lIbN3DFSHnCT^=R0
+R2
+IMca9Ia^_W=1nb_XG6;aXE2
+R3
+R0
+w1749792798
+8alu_decoder.v
+Falu_decoder.v
+!i122 1
+L0 1 18
+R6
+r1
+!s85 0
+31
+R7
+R10
+R8
+!i113 1
+R9
+vcontrol_unit
+R1
+!i10b 1
+!s100 5``l>@3gjGcWAQ=iLK65P3
+R2
+Im_zlm_GVY[=WIG[Dj::2]3
+R3
+R0
+w1750941561
+8control_unit.v
+Fcontrol_unit.v
+!i122 1
+L0 4 40
+R6
+r1
+!s85 0
+31
+R7
+R10
+R8
+!i113 1
+R9
+vdata_memory
+R1
+!i10b 1
+!s100 X1FDBc[3PcAOZ3[ZTfmj?3
+R2
+IXSX`0MCfLa9DV@EgoCY`z3
+R3
+R0
+R4
+8data_memory.v
+Fdata_memory.v
+!i122 1
+L0 1 19
+R6
+r1
+!s85 0
+31
+R7
+R10
+R8
+!i113 1
+R9
+vextend
+R1
+!i10b 1
+!s100 A9C<_D>W9W7m]FV;[`?GQ2
+R2
+IH]8KZL=9ROGHnoL7lX`DS1
+R3
+R0
+w1750935143
+8extend.v
+Fextend.v
+!i122 1
+L0 1 6
+R6
+r1
+!s85 0
+31
+R7
+R10
+R8
+!i113 1
+R9
+vinstr_memory
+R1
+!i10b 1
+!s100 O?bh=dNPBb5iAZ5ceIbU02
+R2
+IMLl[]G8@B8A1J6UI8[DVX3
+R3
+R0
+w1750937252
+8instr_memory.v
+Finstr_memory.v
+!i122 1
+R5
+R6
+r1
+!s85 0
+31
+R7
+R10
+R8
+!i113 1
+R9
+vmain_decoder
+R1
+!i10b 1
+!s100 CVJRmUMX[OaaIKQUJEJ>]2
+R2
+I<D46]eQVicMO<fzIX6:Nb0
+R3
+R0
+w1750940592
+8main_decoder.v
+Fmain_decoder.v
+!i122 1
+L0 1 22
+R6
+r1
+!s85 0
+31
+R7
+R10
+R8
+!i113 1
+R9
+vprogram_counter
+R1
+!i10b 1
+!s100 Yg38JzPKn`3^DA>?n;RB82
+R2
+IZ8la:;>li2<zCllAK68NF1
+R3
+R0
+w1750939854
+8program_counter.v
+Fprogram_counter.v
+!i122 1
+L0 1 15
+R6
+r1
+!s85 0
+31
+R7
+R10
+R8
+!i113 1
+R9
+vregister_file
+R1
+!i10b 1
+!s100 EAMMD6OZ8NIR<HZkF8O]E3
+R2
+Ii<fn34]jL?Z@K;42:APnh2
+R3
+R0
+w1750940397
+8register_file.v
+Fregister_file.v
+!i122 1
+L0 1 25
+R6
+r1
+!s85 0
+31
+R7
+R10
+R8
+!i113 1
+R9
+vsingle_cycle_top
+R1
+!i10b 1
+!s100 n0=^a<YdJed`DmF>oMKT?2
+R2
+ILI4a`8C][mhONRe:=?U5V3
+R3
+R0
+w1750940977
+8single_cycle_top.v
+Fsingle_cycle_top.v
+!i122 1
+L0 12 93
+R6
+r1
+!s85 0
+31
+R7
+R10
+R8
+!i113 1
+R9
+vsingle_cycle_top_tb
+R1
+!i10b 1
+!s100 1j:;O>lVXhnY6YE[Q01K<2
+R2
+I;:V4TT4DoWc<`VQ83S[iJ2
+R3
+R0
+w1750942337
+8testbench.v
+Ftestbench.v
+!i122 1
+L0 1 30
+R6
+r1
+!s85 0
+31
+R7
+R10
+R8
+!i113 1
+R9
