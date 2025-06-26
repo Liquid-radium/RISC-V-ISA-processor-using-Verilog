@@ -14,5 +14,5 @@ MODULE = testbench  # name of the Python test file without .py
 WAVES = 1
 SIM = icarus
 
-include $(shell cocotb-config --makefiles)/MakeFile.sim
+include $(shell cocotb-config --makefiles)/Makefile.sim
 
