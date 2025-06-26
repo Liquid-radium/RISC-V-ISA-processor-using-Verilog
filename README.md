@@ -27,32 +27,32 @@ A **single-cycle processor** completes the execution of each instruction in exac
 
 ## RISC-V-single-cycle-processor
 
-├── alu.v # Arithmetic and Logic Unit
+├── alu.v :Arithmetic and Logic Unit
 
-├── alu_decoder.v # Decodes ALU operation based on instruction funct fields
+├── alu_decoder.v : Decodes ALU operation based on instruction funct fields
 
-├── control_unit.v # Generates control signals for datapath
+├── control_unit.v : Generates control signals for datapath
 
-├── adder.v # Program Counter increment logic
+├── adder.v : Program Counter increment logic
 
-├── data_memory.v # Data memory unit (read/write)
+├── data_memory.v : Data memory unit (read/write)
 
-├── extend.v # Sign-extension for immediate values
+├── extend.v : Sign-extension for immediate values
 
-├── instr_memory.v # Instruction memory (read-only)
+├── instr_memory.v : Instruction memory (read-only)
 
-├── main_decoder.v # Decodes opcodes into control signals
+├── main_decoder.v : Decodes opcodes into control signals
 
-├── program_counter.v # Maintains and updates PC
+├── program_counter.v : Maintains and updates PC
 
-├── register_file.v # RISC-V register file (32 registers)
+├── register_file.v : RISC-V register file (32 registers)
 
-├── single_cycle_top.v # Top-level integration of all modules
+├── single_cycle_top.v : Top-level integration of all modules
 
-└── testbench.v # Testbench for simulation in ModelSim
+└── testbench.v : Testbench for simulation in ModelSim
 
 
-## Instruction Support
+## Instructions used
 | Instruction | Description               |
 | ----------- | ------------------------- |
 | `ADD`       | Adds two registers        |
