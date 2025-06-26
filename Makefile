@@ -1,13 +1,13 @@
 TOPLEVEL_LANG = verilog
-VERILOG_SOURCES = $(PWD)/single_cycle_top.v 
-                  $(PWD)/instr_memory.v 
-                  $(PWD)/program_counter.v 
-                  $(PWD)/register_file.v 
-                  $(PWD)/control_unit.v 
-                  $(PWD)/alu.v 
-                  $(PWD)/data_memory.v 
-                  $(PWD)/adder.v 
-                  $(PWD)/extend.v
+VERILOG_SOURCES = $(PWD)single_cycle_top.v 
+                  $(PWD)instr_memory.v 
+                  $(PWD)program_counter.v 
+                  $(PWD)register_file.v 
+                  $(PWD)control_unit.v 
+                  $(PWD)alu.v 
+                  $(PWD)data_memory.v 
+                  $(PWD)adder.v 
+                  $(PWD)extend.v
 
 TOPLEVEL = single_cycle_top
 MODULE = testbench  # name of the Python test file without .py
