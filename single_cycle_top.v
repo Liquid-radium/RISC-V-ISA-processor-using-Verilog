@@ -2,7 +2,7 @@
 `include "instr_memory.v"
 `include "register_file.v"
 `include "extend.v"
-`include "ALU.v"
+`include "alu.v"
 `include "control_unit.v"
 `include "data_memory.v"
 `include "adder.v"
@@ -30,13 +30,13 @@ program_counter pc(
     .pc(pc_top)
 );
 
-instr_mem im(
+instr_memory im(
     .rst(rst),
     .a(pc_top),
     .rd(rd_instr)
 );
 
-reg_file rf(
+register_file rf(
     .clk(clk),
     .rst(rst),
     .we3(reg_write),
@@ -48,7 +48,7 @@ reg_file rf(
     .rd2()
 );
 
-sign_extend sign_extend(
+extend sign_extend(
     .in(rd_instr),
     .imm_ext(imm_ext_top)
 );
@@ -64,7 +64,7 @@ alu alu(
     .negative_flag()
 );
 
-control_unit_top control_unit(
+control_unit control_unit(
     .op(rd_instr[6:0]),
     .reg_write(reg_write),
     .imm_src(),

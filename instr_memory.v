@@ -1,4 +1,4 @@
-module instr_mem(
+module instr_memory(
     input [31:0] a,
     input rst,
     output [31:0] rd

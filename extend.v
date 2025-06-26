@@ -1,4 +1,4 @@
-module sign_extend(
+module extend(
     input [31:20] in,
     output [31:0] imm_ext
 );

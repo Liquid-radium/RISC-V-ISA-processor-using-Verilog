@@ -1,4 +1,4 @@
-module reg_file(
+module register_file(
     input  [4:0] a1,   // Read address 1
     input  [4:0] a2,   // Read address 2
     input  [4:0] a3,   // Write address

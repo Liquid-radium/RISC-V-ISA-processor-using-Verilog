@@ -1,4 +1,4 @@
-module data_mem(
+module data_memory(
     input  [31:0] a,     // Address
     input  [31:0] wd,    // Write Data
     input         clk,   // Clock

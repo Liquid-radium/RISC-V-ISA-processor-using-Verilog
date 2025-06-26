@@ -1,7 +1,7 @@
 `include "alu_decoder.v"
 `include "main_decoder.v"
 
-module Control_Unit_Top(
+module control_unit(
     input [6:0]op,funct7,
     input [2:0]funct3,
     output reg_write,
