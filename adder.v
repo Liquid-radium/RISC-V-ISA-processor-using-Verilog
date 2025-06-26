@@ -4,5 +4,5 @@ module adder(
     output [31:0] y
 );
 
-assign c = a + b;
+assign y = a + b;
 endmodule

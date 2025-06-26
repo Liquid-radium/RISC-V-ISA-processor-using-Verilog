@@ -1,6 +1,6 @@
 module extend(
-    input [31:20] in,
-    output [31:0] imm_ext
+    input [11:0] in,
+    output wire [31:0] imm_ext
 );
-assign imm_ext = { {20{in[31]}}, in[31:20] };
+assign imm_ext = { {20{in[11]}}, in};
 endmodule

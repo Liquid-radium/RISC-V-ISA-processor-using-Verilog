@@ -10,7 +10,7 @@ module register_file(
     output [31:0] rd2  // Read data 2
 );
 
-reg [31:0] registers [31:0];  // 32 registers, 32-bit wide
+reg [31:0] registers [0:31];  // 32 registers, 32-bit wide
 
 // Combinational reads
 assign rd1 = (rst) ? registers[a1] : 32'h00000000;
